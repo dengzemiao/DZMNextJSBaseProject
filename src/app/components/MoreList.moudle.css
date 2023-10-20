@@ -1,0 +1,10 @@
+.home-more-list-view {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-more-list-view a {
+  cursor: pointer;
+  text-decoration: underline;
+}

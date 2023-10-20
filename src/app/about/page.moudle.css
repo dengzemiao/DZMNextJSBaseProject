@@ -1,0 +1,15 @@
+.about-page-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+}
+.about-page-view .tool-view {
+  margin-top: 20px;
+}
+.about-page-view a:not(:first-child) {
+  margin-left: 10px;
+}
