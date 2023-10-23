@@ -15,7 +15,8 @@ export default async function Page (props: any) {
       <div>首页</div>
       <div className='tool-view'>
         <div>环境：{process.env.NODE_ENV}</div>
-        <div>服务器预先加载数据：{JSON.stringify(data_test, null, 2)}</div>
+        {/* 把 div 当成组件即可，注意服务器组件顶部不需要申明 'use client'，客户端组件才需要 */}
+        <div>服务器组件 - 首屏提前加载数据并生成 html 返回：{JSON.stringify(data_test, null, 2)}</div>
         <div>
           <Link href='/about'>关于我们</Link>
           <Link href='/user'>用户信息</Link>

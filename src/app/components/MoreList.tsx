@@ -16,7 +16,7 @@ export default function Component (props: any) {
   // 渲染组件
   return (
     <div className='home-more-list-view'>
-      <div>页面组件 - 客户端加载更多数据：{JSON.stringify(dataSource)}</div>
+      <div>客户端组件 - 页面独用组件 - 点击加载更多数据客户端渲染：{JSON.stringify(dataSource)}</div>
       {
         dataSource.map(item => {
           return <div key={item}>{item}</div>
