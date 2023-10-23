@@ -6,8 +6,12 @@
 
 - 客户端请求的代理配置使用 `Nginx` 完成，可参考 `src/api/axios.ts` 文件顶部提示。
 
-- 预处理器推荐使用 `sass`，安装后将 `css` 后缀改为 `scss` 即可直接使用。
+- 预处理器推荐
+
+  - 1、使用 `sass`，安装后将 `css` 后缀改为 `scss` 即可直接使用。
 
   ```sh
   $ npm i sass
   ```
+
+  - 2、直接使用 `CSS Modules`
