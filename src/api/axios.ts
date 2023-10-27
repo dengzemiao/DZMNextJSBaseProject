@@ -29,7 +29,6 @@ service.interceptors.request.use(config => {
   // const token = Pub.ACCESS_TOKEN()
   // if (token) { config.headers['X-Token'] = token }
   // if (token) { config.headers['Authorization'] = token }
-  config.headers['Authorization'] = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvdGVzdC1hcGktcHJveHkuanVoYW9rYW55YS5jb21cL2FwaVwvbG9naW5fY29kZSIsImlhdCI6MTY5NzU5OTI3MCwiZXhwIjoxNjk4MjA0MDcwLCJuYmYiOjE2OTc1OTkyNzAsImp0aSI6Imp5ektNVDVmdUowOUt3SDMiLCJzdWIiOjEwMDAwMDA3OSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.DdQlbmw2EAfvw3O_pfHzNhEpfFineTo5MQhKsszzmkg'
   return config
 }, errorHandler)
 
