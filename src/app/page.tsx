@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { getDemo } from '@/api/server'
 import HomeMoreList from '@/components/HomeMoreList'
@@ -12,7 +13,17 @@ export default async function Page (props: any) {
   // 渲染首页
   return (
     <div className='home-page-view'>
-      <div>首页</div>
+      {/* 图片 */}
+      <Image
+        width={200}
+        height={100}
+        src='/images/next.svg'
+        alt='next'
+      ></Image>
+      <div>首页 abc</div>
+      {/* 自定义字体 */}
+      <div style={{ fontFamily: 'HarmonyOS_Sans_Black_Italic' }}>首页 abc</div>
+      {/* 内容 */}
       <div className='tool-view'>
         <div>环境：{process.env.NODE_ENV}</div>
         {/* 把 div 当成组件即可，注意服务器组件顶部不需要申明 'use client'，客户端组件才需要 */}

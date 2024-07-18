@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'HarmonyOS_Sans_Black_Italic';
+  src: url('/fonts/HarmonyOS/HarmonyOS_Sans_Black_Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
   padding: 0px;
   margin: 0px;
