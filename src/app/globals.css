@@ -1,9 +1,14 @@
 @font-face {
   font-family: 'HarmonyOS_Sans_Black_Italic';
+  /* 以下两种写法都可以读取到 */
+  /* src: url('../../public/fonts/HarmonyOS/HarmonyOS_Sans_Black_Italic.ttf') format('truetype'); */
   src: url('/fonts/HarmonyOS/HarmonyOS_Sans_Black_Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+/* 多个字体则继续添加 */
+/* @font-face {} */
 
 html, body {
   padding: 0px;

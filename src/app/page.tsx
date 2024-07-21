@@ -2,11 +2,15 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getDemo } from '@/api/server'
+import { t, langsManager } from '@/utils/locales'
 import HomeMoreList from '@/components/HomeMoreList'
 import MoreList from './components/MoreList'
 import './page.moudle.css'
 
 export default async function Page (props: any) {
+  // 记录语言（需要每个页面该位置都赋值一下，可以设置默认语言，当前语言，主要是因为第三方使用后一直报错，所以自用写了份，支持服务器、静态页面、客户端渲染）
+  // 当前页面这里设置之后，所有组件内都会生效
+  langsManager.lang = props.searchParams.lang
   // 服务器预加载数据（正常使用 data 数据即可）
   // const data_test = await getDemo()
   const data = ['1', '2']
@@ -23,6 +27,13 @@ export default async function Page (props: any) {
       <div>首页 abc</div>
       {/* 自定义字体 */}
       <div style={{ fontFamily: 'HarmonyOS_Sans_Black_Italic' }}>首页 abc</div>
+      {/* 国际化 */}
+      <div className='tool-view'>
+        <div>国际化【{ t('name1') }】</div>
+        <Link href='/?lang=cn'>中文</Link>
+        <Link href='/?lang=tc'>繁体</Link>
+        <Link href='/?lang=en'>英文</Link>
+      </div>
       {/* 内容 */}
       <div className='tool-view'>
         <div>环境：{process.env.NODE_ENV}</div>
