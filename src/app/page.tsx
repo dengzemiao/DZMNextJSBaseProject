@@ -27,6 +27,11 @@ export default async function Page (props: any) {
       <div>首页 abc</div>
       {/* 自定义字体 */}
       <div style={{ fontFamily: 'HarmonyOS_Sans_Black_Italic' }}>首页 abc</div>
+      {/* 锚点跳转 */}
+      <div className='tool-view'>
+        <div><a href="#section1">锚点定位：按钮</a></div>
+        <div><Link href="/user#section1">锚点定位：页面</Link></div>
+      </div>
       {/* 国际化 */}
       <div className='tool-view'>
         <div>国际化【{ t('name1') }】</div>
@@ -45,6 +50,8 @@ export default async function Page (props: any) {
         </div>
         <HomeMoreList></HomeMoreList>
         <MoreList></MoreList>
+        {/* 锚点 */}
+        <div id='section1' style={{ margin: '200px 0px' }}>锚点：section1</div>
       </div>
     </div>
   )
