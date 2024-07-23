@@ -7,6 +7,8 @@ import { t, langsManager } from '@/utils/locales'
 import './HomeMoreList.moudle.css'
 
 export default function Component (props: any) {
+  // 设置多语言
+  langsManager.setLang(props.lang)
   // 数据源
   const [dataSource, setDataSource] = useState<string[]>([])
   // 路由对象【router.push()】

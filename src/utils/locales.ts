@@ -30,15 +30,16 @@ const langsManager: Record<string, any> = {
   // 获取语言
   getLang (): string {
     // 语言key
-    let lang = ''
-    // 是否为客户端
-    if (typeof window !== 'undefined') {
-      // 客户端直接读取浏览器链接上的
-      lang = getQueryParam('lang') || this.default
-    } else {
-      // 服务端直接读取 Page 设置的
-      lang = this.lang || this.default
-    }
+    let lang = this.lang || this.default
+    // let lang = ''
+    // // 是否为客户端
+    // if (typeof window !== 'undefined') {
+    //   // 客户端直接读取浏览器链接上的
+    //   lang = getQueryParam('lang') || this.default
+    // } else {
+    //   // 服务端直接读取 Page 设置的
+    //   lang = this.lang || this.default
+    // }
     // 传入的语言是否存在，不存在使用默认的
     return this.keys.includes(lang) ? lang : this.default
   }
