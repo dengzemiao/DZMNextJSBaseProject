@@ -6,6 +6,8 @@
 
 - 项目初始环境：`node v16.14.0`
 
+  - 2024-7-23 升级为 `nextjs 14` - `node v18.17.0 (npm v9.6.7)` 因为可以使用 [antd ui](https://ant.design/docs/react/use-with-next-cn)，注意配置 `App Router` 闪屏配置。
+
 - 客户端请求的代理配置使用 `Nginx` 完成，可参考 `src/api/axios.ts` 文件顶部提示。
 
 - 预处理器推荐
