@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getDemo } from '@/api/server'
@@ -10,7 +10,7 @@ import './page.moudle.css'
 export default async function Page (props: any) {
   // 记录语言（需要每个页面该位置都赋值一下，可以设置默认语言，当前语言，主要是因为第三方使用后一直报错，所以自用写了份，支持服务器、静态页面、客户端渲染）
   // 当前页面这里设置之后，所有组件内都会生效
-  langsManager.lang = props.searchParams.lang
+  langsManager.setLang(props.searchParams.lang)
   // 服务器预加载数据（正常使用 data 数据即可）
   // const data_test = await getDemo()
   const data = ['1', '2']

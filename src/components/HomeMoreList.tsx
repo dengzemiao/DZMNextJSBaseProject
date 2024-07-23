@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { getDemo } from '@/api/client'
 import { usePathname, useRouter } from 'next/navigation'
+import { t, langsManager } from '@/utils/locales'
 import './HomeMoreList.moudle.css'
 
 export default function Component (props: any) {
@@ -38,7 +39,12 @@ export default function Component (props: any) {
       </div>
       {
         dataSource.map((item, index) => {
-          return <div key={100 + index}>{item}</div>
+          return (
+            <div key={100 + index}>
+              <span>{item} { langsManager.getLang() || '无' } </span>
+              <span>{ t('name1') }</span>
+            </div>
+          )
         })
       }
       <a onClick={touchMore}>加载更多</a>
